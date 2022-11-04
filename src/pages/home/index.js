@@ -144,9 +144,8 @@ export default function Home() {
         {(provided) => (
           <SessionContainer
             ref={provided.innerRef}
-            {...provided.draggableProps}
-            {...provided.dragHandleProps}>
-            <SessionHeader>
+            {...provided.draggableProps}>
+            <SessionHeader {...provided.dragHandleProps}>
               <SessionActions isEditing={isEditing}>
                 <img src={Menu} alt="menu" />
                 <input
